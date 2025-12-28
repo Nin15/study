@@ -1,0 +1,21 @@
+{
+  "name": "ib-study-hub",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "cd apps/web && npm run dev",
+    "build": "cd apps/web && npm install && npm run build",
+    "start": "cd apps/web && npm start",
+    "typecheck": "cd apps/web && npm run typecheck",
+    "install:all": "npm install --prefix apps/web && npm install --prefix apps/mobile",
+    "postinstall": "npm run install:all || true"
+  },
+  "workspaces": [
+    "apps/web",
+    "apps/mobile"
+  ],
+  "engines": {
+    "node": ">=18.0.0"
+  }
+}
